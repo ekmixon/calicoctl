@@ -52,7 +52,7 @@ class TestCalicoctlConvert(TestBase):
         Test convert successfully
         """
         # Convert the file
-        rc = calicoctl("convert -o %s -f %s" % (format, filebase+filename))
+        rc = calicoctl(f"convert -o {format} -f {filebase + filename}")
         rc.assert_no_error()
 
         # With the converted data to a temp file
